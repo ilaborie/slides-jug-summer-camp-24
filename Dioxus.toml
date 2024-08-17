@@ -5,7 +5,7 @@ name = "slides-jug-summer-camp-24"
 
 # Dioxus App Default Platform
 # web, desktop, fullstack
-default_platform = "desktop"
+default_platform = "web"
 
 # `build` & `serve` dist path
 out_dir = "dist"
@@ -16,7 +16,9 @@ asset_dir = "assets"
 [web.app]
 
 # HTML title tag content
-title = "slides-jug-summer-camp-24"
+title = "Et si on écrivait nos Web Components en Rust ?"
+
+base_path = "slides-jug-summer-camp-24"
 
 [web.watcher]
 
@@ -31,10 +33,40 @@ watch_path = ["src", "assets"]
 
 # CSS style file
 
-style = []
+style = [
+  # Fonts
+  "https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap",
+
+  # Pico
+  "/slides-jug-summer-camp-24/pico.min.css",
+  "/slides-jug-summer-camp-24/pico.colors.min.css",
+
+  # PrismJS
+  "/slides-jug-summer-camp-24/prismjs/prism.css",
+
+  # XTermJs
+  "/slides-jug-summer-camp-24/xtermjs/xterm.css",
+
+  # Custom
+  "/slides-jug-summer-camp-24/main.css",
+  "/slides-jug-summer-camp-24/livecode.css",
+  "/slides-jug-summer-camp-24/jugsummercamp.css",
+  "/slides-jug-summer-camp-24/print.css",
+]
 
 # Javascript code file
-script = []
+script = [
+  # PrismJS
+  "/slides-jug-summer-camp-24/prismjs/prism.js",
+  # XTermJs
+  "/slides-jug-summer-camp-24/xtermjs/xterm.js",
+  "/slides-jug-summer-camp-24/xtermjs/addon-attach.js",
+  "/slides-jug-summer-camp-24/xtermjs/addon-clipboard.js",
+  "/slides-jug-summer-camp-24/xtermjs/addon-fit.js",
+  "/slides-jug-summer-camp-24/xtermjs/addon-ligatures.js",
+  "/slides-jug-summer-camp-24/xtermjs/addon-unicode11.js",
+  "/slides-jug-summer-camp-24/xtermjs/addon-web-links.js",
+]
 
 [web.resource.dev]
 
