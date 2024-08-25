@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Et si on écrivait nos Web Components en Rust ?</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap">
+<link rel="stylesheet" href="/pico.min.css">
+<link rel="stylesheet" href="/pico.colors.min.css">
+<link rel="stylesheet" href="/prismjs/prism.css">
+<link rel="stylesheet" href="/xtermjs/xterm.css">
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="/livecode.css">
+<link rel="stylesheet" href="/jugsummercamp.css">
+<link rel="stylesheet" href="/print.css">
+
+</head>
+<body>
+  <div id="main"></div>
+  <script type="module">
+    import init from "/./assets/dioxus/slides-jug-summer-camp-24.js";
+    init("/./assets/dioxus/slides-jug-summer-camp-24_bg.wasm").then(wasm => {
+      if (wasm.__wbindgen_start == undefined) {
+        wasm.main();
+      }
+    });
+  </script>
+  <script src="/prismjs/prism.js"></script>
+<script src="/xtermjs/xterm.js"></script>
+<script src="/xtermjs/addon-attach.js"></script>
+<script src="/xtermjs/addon-clipboard.js"></script>
+<script src="/xtermjs/addon-fit.js"></script>
+<script src="/xtermjs/addon-ligatures.js"></script>
+<script src="/xtermjs/addon-unicode11.js"></script>
+<script src="/xtermjs/addon-web-links.js"></script>
+
+</body>
+</html>

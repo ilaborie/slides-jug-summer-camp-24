@@ -1,0 +1,41 @@
+@media print {
+
+  @page {
+    size: landscape;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+
+  #main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-y: scroll;
+
+    .slide {
+      display: grid;
+      width: calc(100vw - 2em);
+      height: calc(100vh - 2em);
+
+      &:is(.previous, .next) {
+        transform: none;
+        opacity: 1;
+      }
+
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .5);
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+
+      a::after {
+        content: " <" attr(href) "> ";
+        font-size: 50%;
+        font-weight: normal;
+      }
+    }
+  }
+
+}
