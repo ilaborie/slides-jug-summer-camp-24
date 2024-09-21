@@ -1,5 +1,4 @@
 @media print {
-
   @page {
     size: landscape;
   }
@@ -8,7 +7,6 @@
     display: none;
   }
 
-
   #main {
     display: flex;
     flex-direction: column;
@@ -16,16 +14,16 @@
     overflow-y: scroll;
 
     .slide {
+      opacity: 1 !important;
       display: grid;
       width: calc(100vw - 2em);
       height: calc(100vh - 2em);
 
       &:is(.previous, .next) {
         transform: none;
-        opacity: 1;
       }
 
-      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .5);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
       page-break-before: always;
       page-break-after: always;
       page-break-inside: avoid;
@@ -35,7 +33,11 @@
         font-size: 50%;
         font-weight: normal;
       }
+
+      pre[class*="language-"],
+      code[class*="language-"] {
+        font-size: 14px !important;
+      }
     }
   }
-
 }

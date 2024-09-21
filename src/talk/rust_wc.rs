@@ -23,7 +23,7 @@ pub(super) fn slides() -> Element {
                     ", et à compiler"
                 }
                 p { "Performance proche du code natif" }
-                p { "Peut aussi être utilisé en dehors Web" }
+                p { "Peut aussi être utilisé en dehors Web (plugins, bac à sable)" }
                 p {
                     a { class: "wasm", href: "https://developer.mozilla.org/en-US/docs/WebAssembly",
                         "WebAssembly"
@@ -66,7 +66,9 @@ pub(super) fn slides() -> Element {
                         span { lang: "en", "Ownership" }
                     }
                     dd {
-                        "chaque valeur a un propriétaire,"
+                        "chaque valeur a "
+                        strong {"un seul"}
+                        " propriétaire,"
                         br {}
                         "elle est "
                         span { lang: "en", "droppée" }

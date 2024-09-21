@@ -98,16 +98,6 @@ pub(super) fn slides() -> Element {
                         code { "ilaborie/slides-jug-summer-camp-24" }
                     }
                 }
-                p {
-                    "Vos retours constructifs sont bienvenus "
-                    br {}
-                    a {
-                        class: "feedback",
-                        href: "https://app.voxxr.in/events/jsc24",
-                        code { "https://app.voxxr.in/events/jsc24" }
-                    }
-                }
-                img { class: "ferris", src: "/slides-jug-summer-camp-24/icons/Rustacean-flat-happy.svg" }
             }
         }
     }
