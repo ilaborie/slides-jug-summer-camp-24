@@ -14,8 +14,8 @@ use self::bridge::{start_terminal, XtermBridge, XtermJs};
 
 // const FONT_SIZE: u8 = 18;
 // const FONT_SIZE: u8 = 20;
-// const FONT_SIZE: u8 = 22;
-const FONT_SIZE: u8 = 32;
+const FONT_SIZE: u8 = 22;
+// const FONT_SIZE: u8 = 32;
 
 const THEME: &str = include_str!("catppuccin-macchiato.json");
 // const THEME: &str = include_str!("catppuccin-latte.json");

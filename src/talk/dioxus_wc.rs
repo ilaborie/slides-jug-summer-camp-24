@@ -70,6 +70,10 @@ pub(super) fn slides() -> Element {
                             code { "dioxus-web-component" }
                         }
                         "supprime le code fastidieux"
+                        br{}
+                        sub {
+                            "#shameless-plug"
+                        }
                     }
                     li {
                         "masque (une grande partie de) la complexité de "

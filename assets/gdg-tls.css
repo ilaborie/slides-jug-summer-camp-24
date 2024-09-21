@@ -1,0 +1,333 @@
+:root {
+  font-size: 32px;
+
+  /* Colors */
+  --slide-part-bg: var(--pico-background-color);
+  --slide-part-fg: var(--pico-color);
+
+  --slide-header-bg: var(--pico-background-color);
+  --slide-header-fg: var(--pico-color);
+
+  --slide-footer-bg: var(--pico-secondary-background);
+  --slide-footer-fg: var(--pico-secondary-inverse);
+
+  /* Fonts */
+  --pico-font-family: "Quicksand", sans-serif;
+  --pico-font-family-monospace: "Inconsolata", monospace;
+}
+
+[lang="en"] {
+  font-style: italic;
+}
+
+.slide {
+  :is(h2, h3)::before {
+    margin-right: 0.5em;
+  }
+
+  > header {
+    padding-left: 4rem;
+  }
+
+  :is(h1, h2, h3) {
+    --pico-font-family: "Mulish", sans-serif;
+  }
+
+  > footer {
+    ul {
+      color: var(--slide-footer-fg);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 1rem;
+      top: -1.5rem;
+
+      --size: 2rem;
+      height: var(--size);
+      width: var(--size);
+    }
+  }
+}
+
+.slide.part {
+  h2 {
+    font-size: 300%;
+  }
+}
+
+/* Content */
+li:is(.natif, .rust, .dioxus)::before {
+  margin-right: 0.25em;
+}
+
+:is(li, h2, h3).natif::before {
+  content: "🍦";
+}
+
+:is(li, h2, h3).rust::before {
+  content: "🦀";
+}
+
+:is(li, h2, h3).dioxus::before {
+  content: "🧬";
+}
+
+.slide[data-slide-id="33"],
+.slide[data-slide-id="34"],
+.slide[data-slide-id="35"],
+.slide[data-slide-id="36"],
+.slide[data-slide-id="46"],
+.slide[data-slide-id="47"] {
+  h3::before {
+    content: "🍦";
+  }
+}
+
+.slide[data-slide-id="49"],
+.slide[data-slide-id="50"],
+.slide[data-slide-id="51"],
+.slide[data-slide-id="52"],
+.slide[data-slide-id="53"],
+.slide[data-slide-id="54"],
+.slide[data-slide-id="55"],
+.slide[data-slide-id="56"],
+.slide[data-slide-id="57"],
+.slide[data-slide-id="58"],
+.slide[data-slide-id="62"] {
+  h3::before {
+    content: "🦀";
+  }
+}
+
+.slide[data-slide-id="65"],
+.slide[data-slide-id="66"],
+.slide[data-slide-id="67"],
+.slide[data-slide-id="79"] {
+  h3::before {
+    content: "🧬";
+  }
+}
+
+.email {
+  font-size: 80%;
+}
+
+.hashtag::before {
+  --pico-font-family: var(--pico-font-family-monospace);
+  content: "GDG Toulouse";
+}
+
+.speaker::before {
+  content: counter(slide);
+}
+
+a:is(
+    .discord,
+    .mdn,
+    .lit,
+    .stencil,
+    .github,
+    .tool,
+    .feedback,
+    .wasm,
+    .crate,
+    .dioxus,
+    .ycombinator,
+    .email,
+    .book
+  )::before {
+  content: " ";
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  margin-right: 0.25em;
+  text-decoration: none;
+}
+
+a.ycombinator::before {
+  background: url("/slides-jug-summer-camp-24/icons/y-combinator.svg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+a.wasm::before {
+  background: url("/slides-jug-summer-camp-24/icons/webassembly-1.svg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+a.github::before {
+  background: url("/slides-jug-summer-camp-24/icons/github.svg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+a.tool::before {
+  content: "🧰";
+}
+
+a.email::before {
+  content: "📧";
+}
+
+a.book::before {
+  content: "📖";
+}
+
+a.feedback::before {
+  background: url("/slides-jug-summer-camp-24/icons/voxxr.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+a.crate::before {
+  background: url("/slides-jug-summer-camp-24/icons/crate.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+a.dioxus::before {
+  background: url("/slides-jug-summer-camp-24/icons/dioxus.png");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+a.discord::before {
+  background: url("/slides-jug-summer-camp-24/icons/discord.svg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+a.mdn::before {
+  background: url("/slides-jug-summer-camp-24/icons/mdn.svg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+a.lit::before {
+  background: url("/slides-jug-summer-camp-24/icons/lit.svg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+a.stencil::before {
+  background: url("/slides-jug-summer-camp-24/icons/stencil.png");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+/* Custom slide - cover*/
+.slide.cover[data-slide-id="0"] {
+  h1 {
+    font-size: 8vh;
+    color: var(--pico-primary);
+  }
+
+  background: var(--pico-primary-inverse);
+  background-size: cover;
+  background-position: center;
+
+  hgroup {
+    padding-top: 4rem;
+    max-width: 70vw;
+
+    strong {
+      color: var(--pico-secondary);
+      font-size: 4vh;
+    }
+
+    p {
+      color: var(--pico-muted-color);
+      font-size: 4vh;
+    }
+  }
+}
+
+/* Custom slide - whoami */
+[data-slide-id="16"] {
+  header * {
+    --pico-font-family: var(--pico-font-family-monospace);
+  }
+
+  article {
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+  }
+
+  img {
+    height: 1em;
+
+    &.avatar {
+      height: 1.5em;
+      border-radius: 50%;
+      border: thin solid var(--pico-muted-color);
+      box-shadow: 0 0 0.1em var(--pico-muted-color);
+    }
+  }
+}
+
+/* Custom slide - roadmap */
+[data-slide-id="17"] {
+  header h3::before {
+    content: "🗺️";
+  }
+
+  ol {
+    list-style: upper-roman;
+  }
+}
+
+/* Custom slide - Dioxus */
+[data-slide-id="65"] {
+  .links {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+/* Custom slide - ça depent */
+[data-slide-id="82"] {
+  pre {
+    font-size: 0.8rem;
+  }
+}
+
+/* Custom slide - merci */
+[data-slide-id="85"] {
+  background: var(--pico-primary-inverse);
+  background-size: cover;
+  background-position: center;
+
+  > footer {
+    display: none;
+  }
+
+  .center {
+    margin-top: 4rem;
+    padding: 0.5rem 1rem;
+    box-shadow: var(--pico-box-shadow);
+    border-radius: 0.25rem;
+    background: hsla(0, 100%, 100%, 0.3);
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+  }
+}

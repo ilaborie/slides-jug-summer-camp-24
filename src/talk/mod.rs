@@ -25,10 +25,8 @@ pub fn Talk() -> Element {
                     " en Rust ?"
                 }
                 strong { "Igor Laborie" }
-                p { "06 Sept. 2024" }
+                p { "02 Oct. 2024" }
             }
-
-            img { class: "ferris", src: "/slides-jug-summer-camp-24/icons/ferris.svg" }
         }
 
         introduction::slides {}

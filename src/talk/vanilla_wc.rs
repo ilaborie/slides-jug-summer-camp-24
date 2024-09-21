@@ -86,7 +86,7 @@ pub(super) fn slides() -> Element {
         Slide { id: 0x2f.into(), title: "Natif - aller plus loin",
             div { class: "body center",
                 p {
-                    "Framework / lib. / compiler"
+                    "Des bibliothèques pour réduire le code pénible"
                     br {}
                     a { class: "lit", href: "https://lit.dev/", "Lit" }
                     ", "

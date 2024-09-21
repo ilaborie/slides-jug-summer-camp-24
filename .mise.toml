@@ -1,0 +1,10 @@
+[env]
+
+RUST_LOG = "off"
+
+[tools]
+"cargo:dioxus-cli" = "0.5.7"
+
+[settings]
+experimental = true
+cargo_binstall = true

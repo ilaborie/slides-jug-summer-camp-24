@@ -20,11 +20,11 @@
 
 :root:not([data-theme="dark"]) {
   /* --pico-box-shadow: */
-  --pico-card-box-shadow:
-    0.0145rem 0.029rem 0.174rem rgba(129, 145, 181, 0.11698),
+  --pico-card-box-shadow: 0.0145rem 0.029rem 0.174rem
+      rgba(129, 145, 181, 0.11698),
     0.0335rem 0.067rem 0.402rem rgba(129, 145, 181, 0.124),
-    0.0625rem 0.125rem 0.750rem rgba(129, 145, 181, 0.13),
-    0.1125rem 0.225rem 1.350rem rgba(129, 145, 181, 0.136),
+    0.0625rem 0.125rem 0.75rem rgba(129, 145, 181, 0.13),
+    0.1125rem 0.225rem 1.35rem rgba(129, 145, 181, 0.136),
     0.2085rem 0.417rem 2.502rem rgba(129, 145, 181, 0.14302),
     0.5rem 1rem 6rem rgba(129, 145, 181, 0.06),
     0 0 0 0.0625rem rgba(129, 145, 181, 0.015);
@@ -46,7 +46,7 @@ body {
   width: 100%;
   overflow: hidden;
 
-  >.container {
+  > .container {
     /* outline: medium dotted green; */
     display: grid;
   }
@@ -54,6 +54,7 @@ body {
 
 /* Slide */
 .slide {
+  counter-increment: slide;
   /* outline: medium dotted red; */
   position: relative;
   align-items: stretch;
@@ -68,7 +69,7 @@ body {
   min-width: 100vw;
   max-width: 100vw;
 
-  >header {
+  > header {
     display: flex;
     align-items: center;
     padding: 0.25rem 0.5rem;
@@ -82,7 +83,7 @@ body {
     }
   }
 
-  >footer {
+  > footer {
     position: relative;
     min-height: 1rem;
     background: var(--slide-footer-bg);
@@ -92,10 +93,12 @@ body {
 
 /* Slide state */
 .slide {
-  display: none;
+  /* display: none; */
+  opacity: 0;
   position: relative;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
+  z-index: 1;
   transition: all var(--transition-duration) ease-out;
 }
 
@@ -109,8 +112,8 @@ body {
 .slide.previous,
 .slide.next {
   display: grid;
-  opacity: 0.5;
-  z-index: 0;
+  /* opacity: 0.5; */
+  z-index: 2;
 }
 
 .slide.previous {
@@ -123,6 +126,7 @@ body {
 
 /* Slide kind - cover */
 .slide.cover {
+  counter-reset: slide;
   grid-template-rows: 1fr;
   align-items: center;
   justify-items: center;
@@ -153,17 +157,17 @@ body {
 /* Slide kind - full */
 .slide.full {
   grid-template-rows: 1fr;
-  padding: .5rem;
+  padding: 0.5rem;
 
-  >header,
-  >footer {
+  > header,
+  > footer {
     display: none;
   }
 }
 
 /* Slide kind - standard */
 .slide.standard {
-  >footer {
+  > footer {
     color: var(--slide-footer-fg);
     background: var(--slide-footer-bg);
     --pico-nav-element-spacing-vertical: 0.125rem;
@@ -171,7 +175,7 @@ body {
 }
 
 /* Common body  styles */
-.slide> :is(.body, ul, ol, dl, article) {
+.slide > :is(.body, ul, ol, dl, article) {
   max-width: 90%;
 
   &.center {
@@ -190,18 +194,18 @@ body {
 .slide pre.code-block {
   overflow: auto;
   margin: 0 1rem;
-  font-size: .8rem;
+  font-size: 0.8rem;
   --pico-spacing: 1ch;
   align-self: center;
   justify-self: center;
-  border: thin solid rgba(0, 0, 0, .1);
+  border: thin solid rgba(0, 0, 0, 0.1);
   box-shadow: var(--pico-box-shadow);
 
   &[class*="language-"] {
     min-width: 90ch;
     max-width: 9vw;
     padding: 0;
-    font-size: .8rem;
+    font-size: 0.8rem;
     /* font-size: .8rem; */
     white-space: pre-wrap;
   }
@@ -209,7 +213,7 @@ body {
 
 /* More style */
 code {
-  padding: .125em .25em;
+  padding: 0.125em 0.25em;
 }
 
 dl dt {
@@ -219,7 +223,7 @@ dl dt {
 blockquote {
   max-width: 66vw;
   margin-top: 0;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .dimmed {
@@ -231,40 +235,38 @@ article {
   flex-direction: column;
 }
 
-
 /* Github corner */
 .github-corner {
   z-index: 100;
 
   &:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out
+    animation: octocat-wave 560ms ease-in-out;
   }
 }
 
 @keyframes octocat-wave {
-
   0%,
   100% {
-    transform: rotate(0)
+    transform: rotate(0);
   }
 
   20%,
   60% {
-    transform: rotate(-25deg)
+    transform: rotate(-25deg);
   }
 
   40%,
   80% {
-    transform: rotate(10deg)
+    transform: rotate(10deg);
   }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .github-corner:hover .octo-arm {
-    animation: none
+    animation: none;
   }
 
   .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out
+    animation: octocat-wave 560ms ease-in-out;
   }
 }
