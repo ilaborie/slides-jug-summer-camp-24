@@ -51,7 +51,8 @@ style = [
   "/slides-jug-summer-camp-24/main.css",
   "/slides-jug-summer-camp-24/livecode.css",
   # "/slides-jug-summer-camp-24/jugsummercamp.css",
-  "/slides-jug-summer-camp-24/gdg-tls.css",
+  # "/slides-jug-summer-camp-24/gdg-tls.css",
+  "/slides-jug-summer-camp-24/capitole.css",
   "/slides-jug-summer-camp-24/print.css",
 ]
 
