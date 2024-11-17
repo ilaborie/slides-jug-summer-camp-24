@@ -25,7 +25,7 @@ pub fn Talk() -> Element {
                     " en Rust ?"
                 }
                 strong { "Igor Laborie" }
-                p { "02 Oct. 2024" }
+                p { "16 Nov. 2024" }
             }
         }
 
