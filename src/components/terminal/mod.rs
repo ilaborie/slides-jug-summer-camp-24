@@ -1,4 +1,4 @@
-use dioxus::prelude::*;
+pub(crate) use dioxus::prelude::*;
 use dioxus_logger::tracing::{debug, error, info};
 use dioxus_web::WebEventExt as _;
 use futures::channel::mpsc;

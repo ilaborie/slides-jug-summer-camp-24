@@ -20,12 +20,12 @@ pub fn Talk() -> Element {
             hgroup { class: "body center",
                 "data-theme": "light",
                 h1 {
-                    "Et si on écrivait nos "
+                    "🤔 Et si on écrivait nos "
                     span { lang: "en", "Web components" }
                     " en Rust ?"
                 }
                 strong { "Igor Laborie" }
-                p { "16 Nov. 2024" }
+                p { "21 Nov. 2024" }
             }
         }
 
